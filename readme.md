@@ -16,7 +16,7 @@ This sample is build with the following architectural objectives in mind:
 
 # μServices
 
-The below is the prefered approach to take to build this project:
+The below is the preferred approach to take to build this project:
 
 - **identity** -> user identity and authorization (PostgreSQL)
 - **search**: search for products (ElasticSearch)
