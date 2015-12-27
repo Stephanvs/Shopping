@@ -4,9 +4,9 @@ namespace listing
 
     public class Service : NancyModule
     {
-        private readonly EvenGateway _gateway;
+        //private readonly EvenGateway _gateway;
 
-        public Service(EvenGateway gateway) : base("listing")
+        public Service() : base("listing")
         {
             Get["/{productId}"] = arguments =>
             {
