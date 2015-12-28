@@ -1,12 +1,13 @@
+using Even;
+using listing.Aggregates;
+using Nancy;
+
 namespace listing
 {
-    using Nancy;
-
     public class Service : NancyModule
     {
-        //private readonly EvenGateway _gateway;
-
-        public Service() : base("listing")
+        public Service(EvenGateway gateway)
+            : base(modulePath: "listing")
         {
             Get["/{productId}"] = arguments =>
             {
@@ -15,9 +16,7 @@ namespace listing
                 var model = new { ProductId = productId, Name = "ABC" };
                 // var model = sys.store.load(productId);
 
-                // sys.pub.Publish(() =>
-                //     sys.NewListingVisited()
-                // );
+                gateway.SendAggregateCommand<Listing>(productId, new ViewListing());
 
                 return Response.AsJson(model);
             };

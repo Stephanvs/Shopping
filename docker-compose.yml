@@ -1,14 +1,23 @@
 identity:
-    build: ./src/Identity/
+    build: ./src/identity/
     dockerfile: Dockerfile
-    container_name: Shopping_Identity
+    container_name: shopping_identity
     ports:
         - "5004:5004"
     environment:
         - ASPNET_ENV=Development
     links:
-        - postgres
-    
-postgres:
+        - postgres-identity
+
+listing:
+    build: ./src/listing/
+    dockerfile: Dockerfile
+    container_name: shopping_listing
+    ports:
+        - "5000:5000"
+    environment:
+        - ASPNET_ENV=Development
+
+postgres-identity:
     image: postgres
-    container_name: Shopping_Postgres
+    container_name: shopping_identity_postgres
