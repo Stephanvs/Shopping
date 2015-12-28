@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using Akka.Actor;
 using Even;
 using Even.Persistence;
+using Even.Tests;
+using Even.Messages;
 
 namespace listing
 {
-    public abstract class UseCasesTest<TSubject> where TSubject : Aggregate, new()
+    public abstract class UseCasesTest<TSubject> : EvenTestKit where TSubject : Aggregate, new()
     {
         protected UseCasesTest()
         {
             var store = new InMemoryStore();
-            Sys = ActorSystem.Create("listing-tests");
 
             Gateway = Sys
                 .SetupEven()
@@ -20,14 +21,17 @@ namespace listing
                 .Result;
         }
 
-        protected ActorSystem Sys { get; private set; }
-
         protected EvenGateway Gateway { get; private set; }
 
         protected virtual void Verify(UseCase useCase)
         {
             //todo: replay 'given' events from useCase
+            var reader = CreateTestProbe();
+            var writer = CreateTestProbe();
+
             var actor = Sys.ActorOf<TSubject>();
+            actor.Tell(new InitializeAggregate(reader, writer, new GlobalOptions()));
+
             foreach (var evt in useCase.Given)
             {
                 actor.Tell(evt);

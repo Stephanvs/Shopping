@@ -13,7 +13,9 @@
         "xunit.runner.dnx": "2.1.0-rc1-build204",
         "Akka": "1.0.5",
         "FluentAssertions": "4.1.1",
-        "listing": "1.0.0-*"
+        "listing": "1.0.0-*",
+        "Akka.TestKit": "1.0.5",
+        "Akka.TestKit.Xunit2": "1.0.5"
     },
     "commands": {
         "test": "xunit.runner.dnx"
@@ -21,7 +23,8 @@
     "frameworks": {
         "dnx451": {
             "dependencies": {
-                "Even": "1.0.0-*"
+                "Even": "1.0.0-*",
+                "Even.Tests": "1.0.0-*"
             }
         }
     }

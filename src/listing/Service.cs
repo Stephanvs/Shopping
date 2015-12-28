@@ -13,8 +13,9 @@ namespace listing
             {
                 var productId = arguments.productId;
 
-                var model = new { ProductId = productId, Name = "ABC" };
+                // todo: retrieve model from store
                 // var model = sys.store.load(productId);
+                var model = new { ProductId = productId, Name = "ABC" };
 
                 gateway.SendAggregateCommand<Listing>(productId, new ViewListing());
 
