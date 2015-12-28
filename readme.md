@@ -18,15 +18,19 @@ This sample is build with the following architectural objectives in mind:
 
 The below is the preferred approach to take to build this project:
 
-- **identity** -> user identity and authorization (PostgreSQL)
-- **search**: search for products (ElasticSearch)
-- **listing**: view product details (MongoDB)
-- **review**: product reviews (&hellip;)
-- **cart**: shopping cart (&hellip;)
-- **order**: (&hellip;)
-- **xsell**: related items (Machine Learning)
+- **identity** &rarr; user identity and authorization (&hellip;)
+- **search** &rarr; search for products (ElasticSearch)
+- **listing** &rarr; view product details (MongoDB)
+- **review** &rarr; product reviews (&hellip;)
+- **cart** &rarr; shopping cart (&hellip;)
+- **order** &rarr; (&hellip;)
+- **xsell** &rarr; related items (Machine Learning)
 
 # Cross-cutting concerns:
 
 - Analytics (AppInsights)
 - Logging (ELK-stack)
+
+# Running the solution
+
+This application consists of several little, targeted services and in order to be able to run the entire solution in a cohesive way in your local machine, it leverages [Docker Compose](https://docs.docker.com/compose/). You should be able to get everything up and running by running `docker-compose up` command under the root directory of this repository.
