@@ -1,7 +1,7 @@
 identity:
     build: ./src/identity/
     dockerfile: Dockerfile
-    container_name: shopping_identity
+    container_name: shopping-identity
     ports:
         - "5004:5004"
     environment:
@@ -12,7 +12,7 @@ identity:
 listing:
     build: ./src/listing/
     dockerfile: Dockerfile
-    container_name: shopping_listing
+    container_name: shopping-listing
     ports:
         - "5000:5000"
     environment:
@@ -20,4 +20,4 @@ listing:
 
 postgres-identity:
     image: postgres
-    container_name: shopping_identity_postgres
+    container_name: shopping-identity-postgres
