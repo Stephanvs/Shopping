@@ -1,0 +1,10 @@
+language: csharp
+mono:
+  - latest
+solution: Shopping.sln
+#install:
+#  - nuget restore Shopping.sln
+#  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
+#script:
+#  - xbuild /p:Configuration=Release Shopping.sln
+#  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./tests/bin/Release/MyProject.Tests.dll
