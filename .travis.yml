@@ -1,10 +1,21 @@
-language: csharp
-mono:
-  - latest
-solution: Shopping.sln
-#install:
-#  - nuget restore Shopping.sln
-#  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
-#script:
-#  - xbuild /p:Configuration=Release Shopping.sln
-#  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./tests/bin/Release/MyProject.Tests.dll
+language: ruby
+
+# whitelist
+branches:
+  only:
+    - master
+
+services:
+    #Enable docker service inside travis
+    - docker
+
+before_install:
+    - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+
+script:
+    #build the image
+    - docker build --no-cache -t stephanvs/shopping .
+    #tag the build
+    - docker tag stephanvs/shopping:latest
+    #push the image to the repository
+    - docker push stephanvs/shopping
