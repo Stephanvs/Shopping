@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../lib/dnx451/Even.Tests.dll"
+      },
+      "dependencies": {
+        "Even": "1.0.0-*"
+      }
+    }
+  }
+}
