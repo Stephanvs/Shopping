@@ -7,9 +7,9 @@
         "xunit.runner.dnx": "2.1.0-rc1-build204",
         "Akka": "1.0.5",
         "FluentAssertions": "4.1.1",
-        "listing": "1.0.0-*",
         "Akka.TestKit": "1.0.5",
-        "Akka.TestKit.Xunit2": "1.0.5"
+        "Akka.TestKit.Xunit2": "1.0.5",
+        "src": "1.0.0-*"
     },
     "commands": {
         "test": "xunit.runner.dnx"
