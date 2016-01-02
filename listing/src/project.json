@@ -14,7 +14,7 @@
     "frameworks": {
         "dnx451": {
             "dependencies": {
-                "Even": "0.0.1-*"
+                "Even": "1.0.0-*"
             }
         }
     }
