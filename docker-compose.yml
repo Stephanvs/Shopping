@@ -10,9 +10,9 @@
 #         - postgres-identity
 
 listing:
-    build: /listing/src
+    build: listing/src
     dockerfile: Dockerfile
-    container_name: shopping-listing
+#    container_name: shopping-listing
     ports:
         - "5001:5001"
     environment:
