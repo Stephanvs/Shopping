@@ -4,6 +4,7 @@ EXPOSE 5001/tcp
 ENTRYPOINT ["dnx", "-p", "project.json", "web"]
 
 COPY project.json /app/
+COPY NuGet.Config /
 WORKDIR /app
 RUN ["dnu", "restore"]
 COPY . /app
