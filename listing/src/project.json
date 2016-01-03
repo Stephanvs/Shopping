@@ -2,20 +2,18 @@
     "tooling": {
         "defaultNamespace": "listing"
     },
-    "dependencies": {
-        "Akka": "1.0.5",
-        "Microsoft.AspNet.Owin": "1.0.0-rc1-final",
-        "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
-        "Nancy": "1.4.3"
-    },
+  "dependencies": {
+    "Akka": "1.0.5",
+    "Even": "1.0.0-CI00003",
+    "Microsoft.AspNet.Owin": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+    "Nancy": "1.4.3"
+  },
     "commands": {
         "web": "Microsoft.AspNet.Hosting --config hosting.json"
     },
     "frameworks": {
         "dnx451": {
-            "dependencies": {
-                "Even": "1.0.0-*"
-            }
         }
     }
 }
