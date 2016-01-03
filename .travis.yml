@@ -14,8 +14,10 @@ before_install:
 
 script:
     #build the image
-    - docker build --no-cache -t stephanvs/shopping .
-    #tag the build
-    - docker tag stephanvs/shopping:latest stephanvs/shopping:v1
+    - docker build --no-cache -t stephanvs/shopping-listing listing/src
+
+    ##tag the build
+    #- docker tag stephanvs/shopping:latest stephanvs/shopping:v1
+
     #push the image to the repository
-    - docker push stephanvs/shopping
+    - docker push stephanvs/shopping-listing
