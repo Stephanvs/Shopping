@@ -20,7 +20,7 @@ The below is the preferred approach to take to build this project:
 
 - **identity** &rarr; user identity and authorization (&hellip;)
 - **search** &rarr; search for products (ElasticSearch)
-- **listing** &rarr; view product details (MongoDB)
+- [**listing**](/listing) &rarr; view product details (MongoDB)
 - **review** &rarr; product reviews (&hellip;)
 - **cart** &rarr; shopping cart (&hellip;)
 - **order** &rarr; (&hellip;)
