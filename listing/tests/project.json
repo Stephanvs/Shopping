@@ -2,16 +2,16 @@
     "tooling": {
       "defaultNamespace": "listing"
     },
-  "dependencies": {
-    "xunit": "2.1.0",
-    "xunit.runner.dnx": "2.1.0-rc1-build204",
-    "Akka": "1.0.5",
-    "FluentAssertions": "4.1.1",
-    "Akka.TestKit": "1.0.5",
-    "Akka.TestKit.Xunit2": "1.0.5",
-    "src": "1.0.0-*",
-    "Even": "1.0.0-CI00003"
-  },
+    "dependencies": {
+        "xunit": "2.1.0",
+        "xunit.runner.dnx": "2.1.0-rc1-build204",
+        "Akka": "1.0.5",
+        "FluentAssertions": "4.1.1",
+        "Akka.TestKit": "1.0.5",
+        "Akka.TestKit.Xunit2": "1.0.5",
+        "src": "1.0.0-*",
+        "Even": "0.0.2-alpha01"
+    },
     "commands": {
         "test": "xunit.runner.dnx"
     },
